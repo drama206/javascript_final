@@ -1,0 +1,27 @@
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color: rgb(105,10,15);
+}
+
+.menu{
+	background-color: rgb(255,100,60);
+	color: white;
+}
+.header{
+	background-color: rgb(105,10,15);
+	color: White;
+	text-shadow: 2px 2px 2px #000;
+	font-size: xx-large;
+}
+.contact{
+	font-size:xx-small;
+	color: White;
+	text-shadow: 2px 2px 2px #000;
+	text-align: right;
+}
+.orderSum, .priceSum{
+	color: White;
+}
+.options {
+	visibility: hidden;
+}

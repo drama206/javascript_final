@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pizza Parlor - Checkout</title>
+       <meta name="author" content="Kevin KWOK" />
+       <meta name="keywords" content="final project 'Pizza Parlor', based on wireframe" />
+       <meta name="description" content="This template is intended to be used as a base to build my Pizza Parlor web page." />
+       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+       <meta name="robots" content="none" />
+	   <link rel="stylesheet" href="pizzaStyle.css" type="text/css" />
+       <script type="text/javascript" src="library.js"></script>
+	   <script type="text/javascript" src="cookies.js"></script>
+
+</head>
+<body>
+<table name="main" cellpadding="5" width="100%" border="0">
+	<tr>
+		<td width="100"></td>
+		<td></td>
+		<td width="1"></td>
+		<td></td>
+		<td width="1"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="graphics/logo.png" width="238" height="120" alt="" border="0">
+		</td>
+		<td valign="bottom" class="header">Pizza Parlor, Kevin KWOK</td>
+		<td width="1px">&nbsp;</td>
+		<td width="300" valign="bottom" class="contact">
+			20000 68th Ave. W<br />
+			Lynnwood, WA 98036<br />
+			425.222.1234
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<hr style="background-color:white" />
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" valign="top" nowrap="nowrap" class="orderSum">      
+            <a href="order.html" class="orderSum">Home</a><br />
+            <a href="order.html" class="orderSum">Contact Us</a><br />      
+            <a href="order.html" class="orderSum">Order Now</a>
+        </td>
+		<td rowspan="2" width="1" style="background-color: White;"></td>
+
+		<td valign="top" class="menu" width="1000">
+
+			<table class="menu" border="0" width="100%">
+				<tr>
+					<td style="padding-left:35px;">
+						Your Current
+						<script type="text/javascript">
+							document.write(GetCookie("pizzaDesc"));
+						</script>
+					</td>
+					<td style="padding-right:35px;">
+						<br /><br />
+						<script type="text/javascript">
+							document.write(GetCookie("priceSum"));
+						</script>
+					</td>
+				</tr>
+			</table>
+
+		</td>
+		<td rowspan="2" width="1" style="background-color: White;"></td>
+		<td id="orderSum"  class="orderSum" valign="top">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="menu" valign="top">
+			Delivery Information <span style="font-size:x-small">(* required information)</span>
+			<form action="summary.html" method="get" id="customerForm" onsubmit="return chForm();">
+                <table width="100%">
+                    <tr>
+                        <td width="400px">First Name: *</td>
+                        <td><input type="text" name="txtFName" onchange="return clearThis()" /></td>
+                        <td id="txtFName" style="color:white;font-weight:bold"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name: *</td>
+                        <td><input type="text" name="txtLName"  onchange="return clearThis()" /></td>
+                        <td id="txtLName" style="color:white;font-weight:bold"></td>
+                    </tr>
+                    <tr>
+                        <td>Email: *</td>
+                        <td><input type="text" name="txtEmail" size="40" onchange="return clearThis()" /></td>
+                        <td id="txtEmail" style="color:white;font-weight:bold; font-size: smaller"></td>
+                    </tr>
+                    <!--Text inputs for final-->
+                    <tr>
+                        <td>Address: *</td>
+                        <td><input type="text" name="txtAddress" onchange="return clearThis()" />
+                        </td>
+                        <td id="txtAddress" style="color:white;font-weight:bold; font-size: smaller"></td>
+                    </tr>
+                    <tr>
+                        <td>Unit Number: (Optional)</td>
+                        <td><input type="text" name="txtApartment" onchange="return clearThis()" />
+                        </td>
+                        <td id="txtUnitNum" style="color:white;font-weight:bold; font-size: smaller"></td>
+                    </tr>
+                    <tr>
+                        <td>City, State, Zip Code: *</td>
+                        <td>
+                            <input type="text" name="txtCity" onchange="return clearThis()" />
+                            <input type="text" name="txtState" size="2" onchange="return clearThis()" />
+                            <input type="text" name="txtZipcode" size="7" onchange="return clearThis()" />
+                        </td>				    
+                        <td id="txtCity" style="color:white;font-weight:bold; font-size: smaller"></td>
+                        <td id="txtZipcode" style="color:white;font-weight:bold; font-size: smaller"></td>
+                        <td id="txtState" style="color:white;font-weight:bold; font-size: smaller"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number: * (XXX-XXX-XXXX)</td>
+                        <td><input type="text" value="--" name="txtPhone" onchange="return clearThis()" />
+                        </td>
+                        <td id="txtPhone" style="color:white;font-weight:bold; font-size: smaller"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="10" align="center"><br /><br /><input type="submit" name="cmdSubmit" value="Order your Pizza" /></td>
+                    </tr>
+                </table>
+			</form>
+		</td>
+		<td valign="top" id="priceSum" class="orderSum">&nbsp;</td>
+	</tr>
+</table>
+
+
+</body>
+
+</html>

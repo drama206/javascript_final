@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pizza Parlor - Order</title>
+       <meta name="author" content="Kevin KWOK" />
+       <meta name="keywords" content="final project 'Pizza Parlor', based on wireframe" />
+       <meta name="description" content="This template is intended to be used as a base to build my Pizza Parlor web page." />
+       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+       <meta name="robots" content="none" />
+	   <link rel="stylesheet" href="pizzaStyle.css" type="text/css" />
+       <script type="text/javascript" src="library.js"></script>
+	   <script type="text/javascript" src="cookies.js"></script>
+	   
+</head>
+<body>
+<table name="main" cellpadding="5" width="100%" border="0">
+	<tr>
+		<td width="100"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img id="logo" src="graphics/logo.png" width="238" height="120" alt="" border="0">
+		</td>
+		<td valign="bottom" class="header">Pizza Parlor, Kevin KWOK</td>
+		<td width="1px">&nbsp;</td>
+		<td width="300" valign="bottom" class="contact">
+			20000 68th Ave. W<br />
+			Lynnwood, WA 98036<br />
+			425.222.1234
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<hr style="background-color:white" />
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2" valign="top" nowrap="nowrap" class="orderSum">
+            <a href="order.html" class="orderSum">Home</a><br />
+            <a href="order.html" class="orderSum">Contact Us</a><br />      
+            <a href="order.html" class="orderSum">Order Now</a>
+		</td>
+		<td rowspan="2" width="1" style="background-color: White;"></td>
+
+		<td valign="top" class="menu" width="1000">
+			<form>
+			<table class="menu" border="0" width="100%">
+				
+				<tr>
+					<td valign="top">Select your Pizza size:</td>
+					<td>
+						<input type="radio" name="rdoSize" value="0" checked="checked" onclick="return orderSummary()" /> 12"<br />
+						<input type="radio" name="rdoSize" value="1" onclick="return orderSummary()" /> 16"<br />
+						<input type="radio" name="rdoSize" value="2" onclick="return orderSummary()" /> 20"<br />
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2"><hr style="background-color:white" /></td>
+				</tr>
+				
+				<tr>
+					<td valign="top">Select your crust type:</td>
+					<td valign="top" nowrap="nowrap">
+						<input type="radio" name="rdoCrust" checked="checked" value="hand_tossed"  onclick="return orderSummary()" /> Hand-tossed<br />
+						<input type="radio" name="rdoCrust" value="deep_dish"  onclick="return orderSummary()" /> Deep dish <br />
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2"><hr style="background-color:white" /></td>
+				</tr>
+               
+                <tr>
+                    <td valign="top">Build your own:<br /><br />
+                        <input type="checkbox" id="options" name="chkOption" value="0" onclick="return orderSummary()" /> Pineapple<br />
+                        <input type="checkbox" id="options" name="chkOption" value="1" onclick="return orderSummary()" /> Canadian Bacon<br />
+                        <input type="checkbox" id="options" name="chkOption" value="2" onclick="return orderSummary()" /> Pepperoni<br />
+                    </td>                        
+                    <td valign="top">
+                        <input type="radio" id="optionEnabled" checked="checked" onclick="return changeOption()" /> <br /><br />                    
+                        <input type="checkbox" id="options" name="chkOption" value="3" onclick="return orderSummary()" /> Chicken<br />
+                        <input type="checkbox" id="options" name="chkOption" value="4" onclick="return orderSummary()" /> Sausage<br />
+                        <input type="checkbox" id="options" name="chkOption" value="5" onclick="return orderSummary()" /> Tomatoes<br /><br />
+                    </td>                    				                    
+				</tr>
+				<tr>
+				    <td valign="top">OR: Select a Specialty Pizza: <br /><br />	    					<td valign="top">
+                        <input type="radio" id="optionDisabled" name="rdoSpecialty" value="0" onclick="return hideOption()" /> Hawaiian<br />
+						<input type="radio" id="optionDisabled" name="rdoSpecialty" value="1" onclick="return hideOption()" /> Veggie<br />
+						<input type="radio" id="optionDisabled" name="rdoSpecialty" value="2" onclick="return hideOption()" /> Meat Lovers<br />   
+                    </td>
+				</tr>
+				
+				
+			</table>
+			</form>
+		</td>
+		<td rowspan="2" width="1" style="background-color: White;"></td>
+		<td class="orderSum" valign="top">
+			<div id="orderSum" style="height: 175px">Order Summary: <br /><br />
+            </div>
+			<br /><br /><br />
+			<div id="priceSum">
+			<table width="100%"> <tr><td>Subtotal:</td> <td align='right'></td></tr><tr><td>Tax:</td> <td align="right" style="border-bottom-color: White; border-bottom-width: 1px; border-bottom-style: solid;"></td></tr><tr> <td>Total:</td> <td align='right'></td></tr></table>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="menu" width="1000">
+			<center><input type="button" onclick="return writePizzaCookies()" value="Submit Your Order"></center>
+		</td>
+	</tr>
+</table>
+
+
+<script type="text/javascript">
+<!--
+//<![CDATA[
+document.forms[0].reset();
+orderSummary();
+//]]>
+//-->
+</script>
+
+</body>
+
+</html>
